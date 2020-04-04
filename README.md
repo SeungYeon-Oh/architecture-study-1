@@ -5,4 +5,4 @@
 [공간](https://github.com/bnvs/architecture-study/~~~)
 
 - 양혜진 [nukeolaf](https://github.com/nukeolaf)
-[공간](https://github.com/bnvs/architecture-study/~~~)
+[공간](https://github.com/bnvs/architecture-study/tree/nukeolaf)
