@@ -19,7 +19,9 @@ class MainActivity : AppCompatActivity() {
         val api = NaverAPI.create()
 
         searchBtn.setOnClickListener({
-            api.getSearchMovies(CLIENT_ID, CLIENT_SECRET, "매드맥스", 10, 1)
+            var movieName = searchInput.text
+            Log.d(TAG, "searchInput : $movieName")
+            api.getSearchMovies(CLIENT_ID, CLIENT_SECRET, movieName.toString(), 10, 1)
                 .enqueue(object : Callback<MovieList> {
                     override fun onResponse(
                         call: Call<MovieList>,
@@ -34,6 +36,8 @@ class MainActivity : AppCompatActivity() {
                         Log.d(TAG, "실패 : $t")
                     }
                 })
+
+
         })
 
 
