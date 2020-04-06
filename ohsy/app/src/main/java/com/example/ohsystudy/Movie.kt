@@ -1,6 +1,11 @@
 package com.example.ohsystudy
 
-data class MovieList (val items : ArrayList<Movie>)
+data class MovieList(
+    var total: Int,
+    var start: Int,
+    var display: Int,
+    var items: ArrayList<Movie>
+)
 
 data class Movie(
     val title: String,
