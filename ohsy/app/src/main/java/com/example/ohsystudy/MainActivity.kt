@@ -2,10 +2,10 @@ package com.example.ohsystudy
 
 import android.os.Bundle
 import android.util.Log
-import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.gson.GsonBuilder
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -36,6 +36,21 @@ class MainActivity : AppCompatActivity() {
                     ) {
                         // 성공
                         Log.d(TAG, "성공 : ${response.raw()}")
+
+                        val body = response.body().toString()
+                        Log.d(TAG, "body : ${body} ")
+                        Log.d(TAG, "body : ${response.body()?.items.toString()} ")
+                        val gson = GsonBuilder().create()
+
+
+                        val movieList = gson.fromJson(body, MovieList::class.java)
+
+
+                        runOnUiThread {
+                            movieRV.adapter = MovieRVAdapter(movieList)
+                            searchInput.setText("")
+                        }
+
                     }
 
                     override fun onFailure(call: Call<MovieList>, t: Throwable) {
