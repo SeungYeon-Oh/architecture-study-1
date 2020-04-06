@@ -2,7 +2,10 @@ package com.example.ohsystudy
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -17,6 +20,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val api = NaverAPI.create()
+
+        //레이아웃매니저 설정
+        movieRV.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
+        movieRV.setHasFixedSize(true)
 
         searchBtn.setOnClickListener({
             var movieName = searchInput.text.toString()
