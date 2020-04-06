@@ -7,7 +7,7 @@ import retrofit2.http.Query
 
 interface NaverAPI {
     @GET("v1/search/movie.json")
-    fun getSearchNews(
+    fun getSearchMovies(
         @Header("X-Naver-Client-Id") clientId: String,
         @Header("X-Naver-Client-Secret") clientSecret: String,
         @Query("query") query: String,
