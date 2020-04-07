@@ -40,7 +40,7 @@ class MovieRVAdapter(val movieList: MovieList): RecyclerView.Adapter<MovieRVAdap
 //            itemView.textView_director.text = "감독 ${data.director}"
 
             //클릭시 웹사이트 연결
-            itemView.setOnClickListener({
+            itemView.movieCard.setOnClickListener({
                 val webpage = Uri.parse("${data.link}")
                 val webIntent = Intent(Intent.ACTION_VIEW, webpage)
                 view.getContext().startActivity(webIntent);
