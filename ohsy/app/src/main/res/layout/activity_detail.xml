@@ -42,26 +42,72 @@
         app:layout_constraintTop_toBottomOf="@id/movieSubTitle" />
 
     <TextView
-        android:id="@+id/movieInfoTxt"
+        android:id="@+id/directorTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
-        android:text="영화 정보"
+        android:text="감독"
         android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/movieImg" />
 
     <TextView
-        android:id="@+id/movieInfo"
+        android:id="@+id/director"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="left"
-        android:text="영화에 대한 상세한 정보를 출력한다. "
+        android:text="감독 정보"
         android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="@+id/movieInfoTxt"
-        app:layout_constraintTop_toBottomOf="@+id/movieInfoTxt" />
+        app:layout_constraintStart_toStartOf="@+id/directorTxt"
+        app:layout_constraintTop_toBottomOf="@+id/directorTxt" />
+
+    <TextView
+        android:id="@+id/actorTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="배우"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/director" />
+
+    <TextView
+        android:id="@+id/actor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:text="배우 정보 출력"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/actorTxt"
+        app:layout_constraintTop_toBottomOf="@+id/actorTxt" />
+
+    <TextView
+        android:id="@+id/pubDateTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="개봉연도"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actor" />
+
+    <TextView
+        android:id="@+id/pubDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="left"
+        android:text="개봉연도"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/pubDateTxt"
+        app:layout_constraintTop_toBottomOf="@+id/pubDateTxt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
